@@ -1,0 +1,24 @@
+/* ENSEMBLE */
+*{
+    background-color:cornsilk;
+}
+
+/* HOME */
+.homeH1{
+    color: blue;
+}
+
+.imgTest1{
+    height: 250px;
+    width: 300px;
+}
+
+/* ALPHA */
+.alphaH1{
+    color: red;
+}
+
+.imgTest2{
+    height: 450px;
+    width: 600px;
+}
