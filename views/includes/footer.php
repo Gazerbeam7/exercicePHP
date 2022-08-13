@@ -1,1 +1,3 @@
-<footer>VOICI LE FOOTER</footer>
+
+
+<?php include_once 'views/includes/head.php' ?>

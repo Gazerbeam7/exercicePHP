@@ -2,7 +2,7 @@
 
 include_once '_config/config.php';
 include_once '_config/db.php';
-
+include_once '_functions/functions.php';
 
 // définition de la page courante
 if (isset($_GET['page']) and !empty($_GET['page'])) {
