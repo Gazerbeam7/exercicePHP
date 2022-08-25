@@ -1,25 +1,23 @@
-<?php
+<!DOCTYPE html>
+<html lang="fr">
 
-include_once '_config/config.php';
-include_once '_config/db.php';
-include_once '_functions/functions.php';
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice PHP</title>
+</head>
 
-// définition de la page courante
-if (isset($_GET['page']) and !empty($_GET['page'])) {
-    $page = trim(strtolower($_GET['page']));
-} else {
-    $page = 'home';
-}
+<body>
+    <?php
 
-//array contenant toutes les pages
-$allPages = scandir('controllers/');
+    include 'fonctionsSQL.php';
+    include 'fonctionsTable.php';
+    $rows = getAllUsers();
+    afficherTableau($rows, getHeaderTable());
+    ?>
 
-if (in_array($page . '_controller.php', $allPages)) {
+    <a href=formulaireClients.php?id=0>Créer un Client</a>
+</body>
 
-    //inclusion de la page
-    include_once 'models/' . $page . '_model.php';
-    include_once 'controllers/' . $page . '_controller.php';
-    include_once 'views/' . $page . '_view.php';
-} else {
-    echo 'Erreur 404';
-}
+</html>
